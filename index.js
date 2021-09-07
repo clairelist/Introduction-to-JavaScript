@@ -76,7 +76,7 @@ Do the following:
 function multiply(a,b){
   return a*b;
 }
-
+console.log(multiply(9,9));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -110,20 +110,37 @@ Feeding Requirements:
 
 Adult Dogs 1 year and older 
    up to 5 lbs - 5% of their body weight
-   6 - 10 lbs - 4% of their body weight 
-   11 - 15 lbs - 3% of their body weight 
-   > 15lbs - 2% of their body weight 
+   6 - 10 lbs - 4% of their body weight weight=6<=10, weight*0.04
+   11 - 15 lbs - 3% of their body weight  weight=11<=15, weight*0.03
+   > 15lbs - 2% of their body weight  weight>15, weight*0.02
 
 Puppies less than 1 year
-   2 - 4 months 10% of their body weight
-   4 - 7 months 5% of their body weight 
-   7 - 12 months 4% of their body weight
+   2 - 4 months 10% of their body weight age=>0.16<=0.33, return weight*0.1
+   4 - 7 months 5% of their body weight  age>0.33<=0.58, return weight*0.05
+   7 - 12 months 4% of their body weight age>0.58<=1, return weight*0.04
   
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight,age){
+  if(age>=1 && weight<=5){
+    return weight*0.05;
+  } else if (age>=1 && weight>=6 && weight<=10){
+return weight*0.04;
+  } else if (age>=1 && weight>=11 && weight<=15){
+return weight*0.03;
+  } else if (age>=1 && weight>15){
+return weight * 0.02;
+  }
+  else if (age<1 && age>=0.583){
+    return weight*0.04;
+  } else if (age<0.583 && age>=0.333){
+    return weight*0.05;
+  } else if (age<0.333){
+return weight*0.1;
+  } else{
+    return 'please try again!';
+  }
 }
 
 
