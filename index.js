@@ -35,6 +35,13 @@ Do the following:
 
    HINT: no function required
 */
+let vara1=1;
+let vara2=2;
+if (vara2===2) {
+  vara1='changed';
+  console.log(vara1);
+}
+  
 
 
 
@@ -51,6 +58,9 @@ Do the following:
    HINT: look up the Number method
 */
 
+let string="1999";
+const na=Number(string);
+console.log(na);
 
 
 
@@ -63,8 +73,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a,b){
+  return a*b;
 }
 
 
