@@ -171,7 +171,7 @@ if (computer <= 0.34){
   computer= 'rock';
 } else if (computer <= 0.67){
   computer = 'paper';
-} else if (compute > 0.67){
+} else if (computer > 0.67){
   computer = 'scissors';
 }
 
@@ -184,7 +184,6 @@ function game(user, computer){
    return 'you win!';
  } else if (user==='paper' && computer === 'rock'){
    return 'you win!';
-  
  } else if (user === 'scissors' && computer === 'rock'){
    return 'you lose!';
  } else if (user === 'rock' && computer === 'paper'){
@@ -210,8 +209,8 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km * 0.621371;
 }
 
 
@@ -224,8 +223,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48;
 }
 
 
@@ -240,8 +239,13 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number){
+  for (let i=number; i>0; i --){
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, 
+    take one down pass it around ${i-1} bottles of soda on the wall`;
+  }
+ 
+     
 }
 
 
